@@ -1,0 +1,17 @@
+/* =========
+  Category Headers for Blogs & Products
+  This Code is Licensed by Will-Myers.com
+========== */
+body:not(.sqs-edit-mode-active) .first {
+  padding-top: var(--header-height) !important;
+}
+body:not(.sqs-edit-mode-active) .hidden {
+  display:none;
+}
+body.sqs-edit-mode-active [data-category-section] {
+  border: 1px dashed
+}
+body.sqs-edit-mode-active [data-category-section]:after {
+  content: 'Used on page: ' attr(data-category-section);
+  font-size: 12px;
+}
