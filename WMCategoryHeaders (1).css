@@ -1,0 +1,60 @@
+/* =========
+  Gallery - Infinity Photo Pile
+  This Code is Licensed by Will-Myers.com
+========== */
+
+.wm-image-randomizer{
+  position:relative;
+  display:block;
+  max-height: auto;
+  width:100%;
+  max-height: 80vh;
+  background: hsla(0, 0%, 97%, 1);
+}
+.wm-ir-wrapper{
+  position:relative;
+  display:grid;
+  place-items:center;
+  height:100%;
+  width:100%;
+  max-height: 80vh;
+}
+.wm-ir-item {
+  grid-area: 1 / 1;
+  
+  aspect-ratio:var(--aspect-ratio);
+  display:block;
+  position:relative;
+  width: 100%;
+  height: 100%;
+  min-width:0;
+  min-height:0;
+  max-width: 100%;
+  max-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.2);
+  z-index:1;
+  transition: opacity .3s ease 0.2s;
+}
+.wm-ir-item.activate {
+  visibility: visible;
+  opacity: 1;
+}
+.wm-ir-item img {
+  aspect-ratio:var(--aspect-ratio);
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  min-width:0;
+  min-height:0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wm-ir-item.active  {
+  z-index:2;
+  opacity: 1;
+}
