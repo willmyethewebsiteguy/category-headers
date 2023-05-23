@@ -1,5 +1,5 @@
 /* =========
-  Category Stuff
+  Category Page Banners
   This Code is Licensed by Will-Myers.com
 ========== */
 
@@ -9,7 +9,7 @@
   let header = document.querySelector('#header');
   let url = window.location.pathname;
   let isBackend = window.self !== window.top;
-  let isActiveProduct = document.querySelector('.category-link.active')
+  let isActiveProduct = document.querySelector('.category-link.active');
 
   /*Remove Unneeded Sections on LIVE site*/
   for (let el of els){
@@ -23,8 +23,10 @@
     }
   }
 
-  // Set Header Color Theme
-  let firstSection = document.querySelector('#sections > *:first-child')
+  //Get First Section
+  let firstSection = document.querySelector('#sections > *.page-section:not(.hidden)');
+
+  // Set Header Color Theme to First Section
   let theme = firstSection.dataset.sectionTheme || 'white';
   header.classList.remove('white', 'white-bold', 'light', 'light-bold', 'bright', 'bright-bold', 'dark', 'dark-bold', 'black', 'black-bold');
   header.classList.add(theme);
