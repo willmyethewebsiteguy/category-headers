@@ -2,10 +2,10 @@
   Category Headers for Blogs & Products
   This Code is Licensed by Will-Myers.com
 ========== */
-body:not(.sqs-edit-mode-active) .first {
+body:not(.sqs-edit-mode-active) .first.page-section {
   padding-top: var(--header-height) !important;
 }
-body:not(.sqs-edit-mode-active) .hidden {
+body:not(.sqs-edit-mode-active) .hidden.page-section {
   display:none;
 }
 body.sqs-edit-mode-active [data-category-section] {
