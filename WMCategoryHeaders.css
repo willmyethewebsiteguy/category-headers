@@ -15,3 +15,10 @@ body.sqs-edit-mode-active [data-category-section]:after {
   content: 'Used on page: ' attr(data-category-section);
   font-size: 12px;
 }
+
+.page-section:has([data-category-section]) {
+  display:none;
+}
+.is-category-section:has([data-category-section]) {
+  display:flex;
+}
