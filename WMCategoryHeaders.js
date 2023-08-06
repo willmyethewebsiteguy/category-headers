@@ -15,6 +15,7 @@
   for (let el of els){
     let category = el.dataset.categorySection;
     let section = el.closest('.page-section');
+    section.classList.add('is-category-section')
     if (category == url || (category + '/') == url) continue;
     if (isBackend) {
       section.classList.add('hidden');
